@@ -4,8 +4,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import api from "../../services/api";
+import logo from "../../assets/img/logo.png";
 
-import { Form, Error, Image } from "./styles";
+import { Form, Error, Image, Logo } from "./styles";
 
 interface FormatImage {
   id: string;
@@ -66,6 +67,7 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <Logo src={logo} alt="logo pitang" />
       <Form
         data-testid="search-form"
         hasError={!!inputError}

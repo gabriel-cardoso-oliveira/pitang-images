@@ -67,3 +67,8 @@ export const Image = styled.img`
   flex-grow: 0;
   margin: 0.25rem;
 `;
+
+export const Logo = styled.img`
+  height: 8rem;
+  width: auto;
+`;
