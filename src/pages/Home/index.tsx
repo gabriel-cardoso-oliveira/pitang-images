@@ -1,12 +1,11 @@
 import React, { useState, FormEvent } from "react";
 import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import api from "../../services/api";
 
-import { Form, Error } from "./styles";
+import { Form, Error, Image } from "./styles";
 
 interface FormatImage {
   id: string;
@@ -68,7 +67,11 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Form data-testid="search-form" onSubmit={handleAddImages}>
+      <Form
+        data-testid="search-form"
+        hasError={!!inputError}
+        onSubmit={handleAddImages}
+      >
         <input
           id="search-input"
           type="text"
@@ -85,7 +88,7 @@ const Home: React.FC = () => {
         <Row>
           <Col xs={12} md={4}>
             {photos.map((photo) => (
-              <Image key={photo.id} src={photo.url} alt={photo.alt} rounded />
+              <Image key={photo.id} src={photo.url} alt={photo.alt} />
             ))}
           </Col>
         </Row>
