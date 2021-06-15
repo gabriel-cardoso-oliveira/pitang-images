@@ -26,9 +26,8 @@ const Home: React.FC = () => {
   const [searchValue, setSearchValue] = useState("");
   const [inputError, setInputError] = useState("");
 
-  const keyApi = "e38f1bc56d9486ca37e84667b7a98ba8";
-  const flickerApi =
-    "?method=flickr.photos.search&sort=relevance&format=json&nojsoncallback=1&";
+  const keyApi = process.env.REACT_APP_KEY_API;
+  const flickerApi = process.env.REACT_APP_FLICKER_API;
 
   const formatImageData = (img: FormatImage) => {
     return {
