@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
 
-function App() {
-  return (
-    <h1>Pitang Images</h1>
-  );
-}
+import GlobalStyle from "./styles/global";
+import Home from "./pages/Home";
+
+const App: React.FC = () => (
+  <>
+    <Home />
+    <GlobalStyle />
+  </>
+);
 
 export default App;
