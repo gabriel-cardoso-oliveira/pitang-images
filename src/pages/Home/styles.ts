@@ -34,3 +34,9 @@ export const Form = styled.form`
     }
   }
 `;
+
+export const Error = styled.span`
+  display: block;
+  color: #d03e35;
+  margin-top: 8px;
+`;
