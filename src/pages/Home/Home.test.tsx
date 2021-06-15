@@ -4,14 +4,12 @@ import Home from "./index";
 
 describe("Home component", () => {
   it("must be able to search images", () => {
-    const { getByPlaceholderText, getByTestId, debug } = render(<Home />);
+    const { getByPlaceholderText, getByTestId } = render(<Home />);
 
     fireEvent.change(getByPlaceholderText("Search image"), {
       target: { value: "cats" },
     });
     fireEvent.submit(getByTestId("search-form"));
-
-    debug();
 
     expect(getByPlaceholderText("Search image")).toHaveValue("cats");
   });
